@@ -1,8 +1,7 @@
 # Yourls Popular Links
 
-* The plugin is compatible with Yourls 1.7 or higher.
-
 This version:
+* is compatible with Yourls 1.7 or higher
 * fixes the deprecated function and removes the warning
 * formats the code to make it consistent and pretty
 
@@ -30,3 +29,5 @@ Upload it to the /pages directory of your YOURLS installation
 and call it like YOURLS-SITE/popularlinks
 
 As with the plugin, you can customize it by editing it's values.
+
+Please let me know if there's anything else that needs to be changed or updated.
