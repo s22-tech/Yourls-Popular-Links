@@ -17,8 +17,8 @@ At the bottom of the plugin, you can edit the values:
 
 > show_top(1000,5);
 
-1000 means the number of days you are selecting from the database
-5 means the number of links you are selecting
+* 1000 means the number of days you are selecting from the database
+* 5 means the number of links you are selecting
 
 ** Bonus! Want to show it as a public page?
 
