@@ -19,41 +19,42 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/load-yourls.php' ;
 
  echo <<<HTML
 		<h2>Popular Links</h2>
-		
+
 HTML;
-function show_top($numdays,$numlinks) {
+function show_top($numdays, $numlinks) {
 
 global $ydb;
  $base = YOURLS_SITE;
  $table_url = YOURLS_DB_TABLE_URL;
-// 
+//
 $links = '';
 
-$query = $ydb->fetchObjects("SELECT `title`, `timestamp`, `url`, `keyword`, `clicks` 
-                             FROM `$table_url` WHERE `timestamp` >= SUBDATE(CURDATE(), $numdays) 
-                             ORDER BY `clicks` DESC 
+$query = $ydb->fetchObjects("SELECT `title`, `timestamp`, `url`, `keyword`, `clicks`
+                             FROM `$table_url` WHERE `timestamp` >= SUBDATE(CURDATE(), $numdays)
+                             ORDER BY `clicks` DESC
                              LIMIT $numlinks");
 if ($query) {
 	foreach ( $query as $query_result ) {
       $this_url_array = parse_url(stripslashes($query_result->url));
       $diff = abs( time() - strtotime( $query_result->timestamp ) );
       $days = floor( $diff / (60 * 60 * 24) );
-	if ( $days < 1) {
-		$created = 'today';
-	} 
-	else if ( $days < 2) {
-		$created = ' 1 day ago';
-	}
-	else  {
-		$created = $days. ' days ago';
-	}
-   $links .= '(' . $query_result->clicks . ')  - ' .$this_url_array[host] .' - <a href="' . $base . '/' . $query_result->keyword .'" target="blank">';
-	
-   $links .= str_replace('www.', '', $query_result->title) . '</a> <a href=" ' . $base . '/' . $query_result->keyword .'+" target="blank"></a> Created ' . $created . '<br>';
-	}
+      if ( $days < 1) {
+         $created = 'today';
+      }
+      else if ( $days < 2) {
+         $created = ' 1 day ago';
+      }
+      else  {
+         $created = $days. ' days ago';
+      }
+      $links .= '(' . $query_result->clicks . ')  - ' .$this_url_array[host] .' - <a href="' . $base . '/' . $query_result->keyword .'" target="blank">';
+
+      $links .= str_replace('www.', '', $query_result->title) . '</a> <a href=" ' . $base . '/' . $query_result->keyword .'+" target="blank"></a> Created ' . $created . '<br>';
+      }
+   }
+   echo '<h3><b>Popular Links in the Last '. $numdays . ' Days:</b></h3><br/> ' . $links . "<br><br>\n\r";
 }
-echo '<h3><b>Popular Links in the Last '. $numdays . ' Days:</b></h3><br/> ' . $links . "<br><br>\n\r";
-}
+
 // Edit these if you want to show a different number of days/number of links! i.e. 1,5 = 5 most popular links created in the last 1 day.
 show_top(1,5);
 show_top(30,5);
