@@ -13,20 +13,20 @@ $url = YOURLS_SITE . '/popularlinks';
 
 yourls_html_head( 'popularlinks', 'Popular Links' );
 
-// Start YOURLS engine.
+// Start YOURLS engines!  :)
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/load-yourls.php' ;
 
 
- echo <<<HTML
+echo <<<HTML
 		<h2>Popular Links</h2>
 
 HTML;
 function show_top($numdays, $numlinks) {
 
 global $ydb;
- $base = YOURLS_SITE;
- $table_url = YOURLS_DB_TABLE_URL;
-//
+$base = YOURLS_SITE;
+$table_url = YOURLS_DB_TABLE_URL;
+
 $links = '';
 
 $query = $ydb->fetchObjects("SELECT `title`, `timestamp`, `url`, `keyword`, `clicks`
