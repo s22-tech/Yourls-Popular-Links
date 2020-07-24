@@ -5,9 +5,9 @@ This version:
 * fixes the deprecated function and removes the warning
 * formats the code to make it more consistent and prettier
 
-The plugin shows an admin page with the most popular links created in 1, 30, 365, and 1000 days on a YOURLS site.
+The plugin shows an admin page with the most popular links created in the last 1, 30, 365, and 1000 days on a YOURLS site.
 
-Download plugin.php, save as plugin.php, and upload to YOURLS_DIRECTORY/user/plugins/popular-links/
+Download plugin.php, save it as plugin.php, and upload it to YOURLS_DIRECTORY/user/plugins/popular-links/
 
 IMPORTANT:  Make sure to remove/overwrite any older version of Popular Links, if you've installed it on your server.
 
