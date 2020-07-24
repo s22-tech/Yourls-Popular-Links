@@ -52,7 +52,7 @@ if ($query) {
       $links .= str_replace('www.', '', $query_result->title) . '</a> <a href=" ' . $base . '/' . $query_result->keyword .'+" target="blank"></a> Created ' . $created . '<br>';
       }
    }
-   echo '<h3><b>Popular Links in the Last '. $numdays . ' Days:</b></h3><br/> ' . $links . "<br><br>\n\r";
+   echo '<h3><b>Popular Links in the Last '. number_format($numdays) . ' Days:</b></h3><br/> ' . $links . "<br><br>\n\r";
 }
 
 // Edit these if you want to show a different number of days/number of links! i.e. 1,5 = 5 most popular links created in the last 1 day.
