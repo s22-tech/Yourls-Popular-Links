@@ -1,6 +1,6 @@
 # Yourls Popular Links
 
-* The plugin only works for Yourls 1.7+. 
+* The plugin is compatible with Yourls 1.7 or higher.
 
 * This version fixes the deprecated function and removes the warning.
 
