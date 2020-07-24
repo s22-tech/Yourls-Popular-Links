@@ -2,7 +2,9 @@
 
 * The plugin is compatible with Yourls 1.7 or higher.
 
-* This version fixes the deprecated function and removes the warning.
+This version:
+* fixes the deprecated function and removes the warning
+* formats the code to make it consistent and pretty
 
 The plugin shows an admin page with the most popular links created in 1, 30, 365, and 1000 days on a YOURLS site.
 
