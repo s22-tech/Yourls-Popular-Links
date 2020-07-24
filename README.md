@@ -2,6 +2,8 @@
 
 * The plugin only works for Yourls 1.7+. 
 
+* This version fixes the deprecated function and removes the warning.
+
 The plugin shows an admin page with the most popular links created in 1, 30, 365, and 1000 days on a YOURLS site.
 
 Download plugin.php, save as plugin.php, and upload to YOURLS_DIRECTORY/user/plugins/popular-links/
@@ -26,4 +28,4 @@ Upload it to the /pages directory of your YOURLS installation.
 
 It will appear on your site as YOURLS-SITE/popularlinks
 
-As with the plugin, you can customize it by editing the values
+As with the plugin, you can customize it by editing the values.
