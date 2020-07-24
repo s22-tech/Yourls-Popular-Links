@@ -24,8 +24,7 @@ At the bottom of the plugin, you can edit the values
 
 Save popularlinks.php
 
-Upload it to the /pages directory of your YOURLS installation.
+Upload it to the /pages directory of your YOURLS installation
+and call it like YOURLS-SITE/popularlinks
 
-It will appear on your site as YOURLS-SITE/popularlinks
-
-As with the plugin, you can customize it by editing the values.
+As with the plugin, you can customize it by editing it's values.
