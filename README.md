@@ -13,7 +13,7 @@ IMPORTANT:  Make sure to remove/overwrite any older version of Popular Links, if
 
 Advanced:
 
-At the bottom of the plugin, you can edit the values:
+At the bottom of the plugin, you can edit the values, e.g.:
 
 > show_top(1000,5);
 
