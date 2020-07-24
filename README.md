@@ -22,7 +22,7 @@ At the bottom of the plugin, you can edit the values, e.g.:
 
 ** Bonus! Want to show it as a public page?
 
-Save popularlinks.php to the /pages directory of your YOURLS installation
+Save popularlinks.php to the YOURLS_DIRECTORY/pages directory of your YOURLS installation
 and access it like: YOURLS-SITE/popularlinks
 
 As with the plugin, you can customize it by editing it's values.
